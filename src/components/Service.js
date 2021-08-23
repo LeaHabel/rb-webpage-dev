@@ -8,7 +8,7 @@ const Card = props => {
             <div class="card-flex-responsive bg-darkblue2">
                 <img class="card-img" src={props.img} />
                 <div class="card-text-container">
-                    <hr class="hairline-white" />
+                    <hr class="hairline-white-card" />
                     <div class="text-white font-bitter card-title">{props.title}</div>
                     <p class="text-white">{props.content}</p>
                     <p class="text-white text-base">Read more</p>

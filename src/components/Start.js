@@ -18,7 +18,7 @@ export default function Example() {
 
                     <main className="mt-32 mx-auto max-w-7xl px-4 sm:mt-16 sm:px-6 md:mt-32 lg:mt-32 lg:px-8 xl:mt-56">
                         <div className="sm:text-left lg:text-left">
-                            <hr class="hairline-white" />
+                            <hr class="hairline-white-display" />
                             <h1 className="text-2xl tracking-tight text-white font-bitter font-medium sm:text-4xl md:text-5xl">
                                 <span className="block xl:inline">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                                 </span>{' '}

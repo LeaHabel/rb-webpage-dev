@@ -11,8 +11,12 @@ body {
     font-family: 'Bitter', serif;
   }
   
-.hairline-white {
+.hairline-white-display {
     @apply  bg-white border my-6 w-20;
+}
+
+.hairline-white-card {
+    @apply  bg-white border-0.5 my-6 w-20;
 }
 
 
