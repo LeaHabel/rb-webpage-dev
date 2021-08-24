@@ -9,9 +9,19 @@ const Card = props => {
                 <img class="card-img" src={props.img} />
                 <div class="card-text-container">
                     <hr class="hairline-white-card" />
-                    <div class="text-white font-bitter card-title">{props.title}</div>
-                    <p class="text-white">{props.content}</p>
-                    <p class="text-white text-base">Read more</p>
+                    <div class="text-white card-title">{props.title}</div>
+                    <p class="text-white card-content">{props.content}</p>
+                    <button class="font-bold w-1/4 mt-16 py-2 px-4 inline-flex items-center border-t-2 border-buttonColor
+                    ">
+                        <div class="transform transition-all hover:translate-x-8 absolute block p-6 px-12 mt-6 -ml-12">
+                            <svg
+                                className="stroke-current text-buttonColor w-6 h-6 border-buttonColor"
+                                fill="none" stroke="" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                            <span></span>
+                            <rect x="0" y="0" width="100%" height="100%" fill="none" />
+                        </div>
+                    </button>
                 </div>
             </div>
 

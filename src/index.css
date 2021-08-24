@@ -16,7 +16,7 @@ body {
 }
 
 .hairline-white-card {
-    @apply  bg-white border-0.5 my-6 w-20;
+    @apply  bg-white border-0.5 my-4 w-20;
 }
 
 
@@ -52,7 +52,14 @@ body {
     leading-normal;
 }
 .card-title {
-    @apply text-xl mb-2 leading-tight;
+    @apply font-bitter
+    text-xl 
+    leading-tight
+    mb-2;
+}
+
+.card-content {
+    @apply sm:text-sm md:text-sm lg:text-base text-sm;
 }
 .service-card {
     @apply flex flex-col justify-center items-center bg-white h-screen py-40;

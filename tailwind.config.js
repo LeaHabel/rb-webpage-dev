@@ -12,12 +12,17 @@ module.exports = {
         midblue3: "#0014cc",
         lightblue1: "#0016e6",
         lightblue2: "#0018f2",
+
+        buttonColor: "#d1593d",
       },
       width: {
         '48-custom': '48%',
       },
       borderWidth: {
         '0.5': '0.5px',
+      },
+      stroke: {
+        buttonColor: "#d1593d",
       }
 
     },
