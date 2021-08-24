@@ -12,11 +12,12 @@ body {
   }
   
 .hairline-white-display {
-    @apply  bg-white border my-6 w-20;
+    @apply  border-white border my-6 w-20;
 }
 
 .hairline-white-card {
-    @apply  bg-white border-0.5 my-4 w-20;
+    @apply  border-white border-0.5 my-4 w-20
+    group-hover:border-black;
 }
 
 
@@ -35,7 +36,9 @@ body {
             sm:w-full md:w-3/4 lg:w-48-custom xl:w-2/5 w-full   
             sm:h-auto lg:h-80 h-auto
             sm:p-8 md:py-8 lg:p-8 xl:px-16 xl:py-8 p-8
-            overflow-hidden;
+            overflow-hidden
+            hover:bg-almostWhite
+            transition-all;
 }
 
 .card-img {
@@ -55,17 +58,25 @@ body {
     @apply font-bitter
     text-xl 
     leading-tight
-    mb-2;
+    mb-2
+    group-hover:text-darkblue2
+    transition-all;
 }
 
 .card-content {
-    @apply sm:text-sm md:text-sm lg:text-base text-sm;
+    @apply sm:text-sm md:text-sm lg:text-base text-sm
+    group-hover:text-darkblue2
+    transition-all;
 }
-.service-card {
+/*.service-card {
     @apply flex flex-col justify-center items-center bg-white h-screen py-40;
 }
 
 .center-content {
     @apply flex flex-col justify-center items-center;
+}*/
+
+.button-arrow-animation {
+    @apply transform transition-all hover:translate-x-8;
 }
 

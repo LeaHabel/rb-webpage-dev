@@ -13,6 +13,8 @@ module.exports = {
         lightblue1: "#0016e6",
         lightblue2: "#0018f2",
 
+        almostWhite: "#f9f9f9",
+
         buttonColor: "#d1593d",
       },
       width: {
