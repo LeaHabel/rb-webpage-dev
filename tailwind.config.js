@@ -15,22 +15,30 @@ module.exports = {
 
         almostWhite: "#f9f9f9",
 
-        buttonColor: "#d1593d",
+        buttonColorDarkBG: "#d1593d",
+        buttonColorBrightBG: "#b70202",
+        buttonColorFull: "#b70202",
       },
       width: {
         '48-custom': '48%',
       },
       borderWidth: {
         '0.5': '0.5px',
+        '1.5': '1.5px',
       },
       stroke: {
-        buttonColor: "#d1593d",
-      }
+        buttonColorDarkBG: "#d1593d",
+        darkblue2: "#000a66",
+      },
 
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      translate: ['group-hover'],
+      width: ['group-hover'],
+      opacity: ['group-hover'],
+    },
   },
   plugins: [],
 }
