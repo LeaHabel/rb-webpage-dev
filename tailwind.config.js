@@ -39,12 +39,14 @@ module.exports = {
   variants: {
     extend: {
       translate: ['group-hover'],
-      width: ['group-hover'],
-      opacity: ['group-hover'],
+      width: ['group-hover', 'hover'],
+      opacity: ['group-hover', 'hover'],
       display: ['group-hover', 'hover'],
       border: ['group-hover', 'hover'],
       borderWidth: ['group-hover', 'hover'],
     },
   },
-  plugins: [],
+  plugins: [
+    require("tailwindcss-nested-groups"),
+  ],
 }
