@@ -22,6 +22,9 @@ module.exports = {
       width: {
         '48-custom': '48%',
       },
+      height: {
+        '82': '22rem',
+      },
       borderWidth: {
         '0.5': '0.5px',
         '1.5': '1.5px',
@@ -38,6 +41,9 @@ module.exports = {
       translate: ['group-hover'],
       width: ['group-hover'],
       opacity: ['group-hover'],
+      display: ['group-hover', 'hover'],
+      border: ['group-hover', 'hover'],
+      borderWidth: ['group-hover', 'hover'],
     },
   },
   plugins: [],
