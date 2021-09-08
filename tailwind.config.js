@@ -31,6 +31,7 @@ module.exports = {
       },
       stroke: {
         buttonColorDarkBG: "#d1593d",
+        buttonColorBrightBG: "#b70202",
         darkblue2: "#000a66",
       },
 

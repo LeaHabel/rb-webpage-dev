@@ -18,7 +18,7 @@ export default function Example() {
 
                     <main className="start-main">
                         <div className="start-text-content">
-                            <hr class="hairline-white-display" />
+                            <hr class="hairline-display border-white" />
                             <h1 className="start-headline">
                                 <span className="block xl:inline">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                                 </span>{' '}

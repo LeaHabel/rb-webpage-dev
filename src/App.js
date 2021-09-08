@@ -4,8 +4,7 @@ import './App.css';
 
 import Navigationbar from './components/Navigationbar.js';
 import Dropdown from './components/Dropdown.js';
-import References from './components/References.js';
-import Person from './components/Person.js';
+
 
 import Contact from './components/Contact.js';
 import Footer from './components/Footer.js';
@@ -13,6 +12,7 @@ import Footer from './components/Footer.js';
 import Home from './pages';
 import Service from './pages/servicepage';
 import Personpage from './pages/personpage';
+
 
 import { Switch, Route } from 'react-router';
 {/* https://www.youtube.com/watch?v=gOQ31Kc8H5E&t=437s&ab_channel=BrianDesign 43:15*/ }
@@ -51,8 +51,7 @@ export default function App() {
         <Route path="/service" component={Service} />
         <Route path="/person" component={Personpage} />
       </Switch>
-      <References />
-      <Person />
+
       <Contact />
       <Footer />
 

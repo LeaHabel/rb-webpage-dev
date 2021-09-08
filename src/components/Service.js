@@ -1,4 +1,5 @@
 import { Card } from './design-components/Card';
+import { TopicHeadline } from './design-components/TopicHeadline'
 
 import ImageOne from '../images/01-wheel.svg';
 import ImageTwo from '../images/01-shield.svg';
@@ -13,8 +14,9 @@ import ImageFourFill from '../images/001-method-fill.svg';
 export default function Service() {
     return (
         <>
-            <h2 class="headline text-white">Leistungen</h2>
-            <div class="card-bg-responsive bg-midblue1">
+            <TopicHeadline headline="Leistungen" bgColor="bg-midblue1" textColor="text-white" />
+
+            <div className="card-bg-responsive bg-midblue1">
                 <Card img={ImageOne} imgFill={ImageOneFill} title="Automotive SPICE" content="Lorem ipsum dolor sit amet, consetetur sadipscing elitr sed diam." />
                 <Card img={ImageTwo} imgFill={ImageTwoFill} title="Funktionale Sicherheit ISO 26262" content="Lorem ipsum dolor sit amet, consetetur sadipscing elitr sed diam." />
                 <Card img={ImageThree} imgFill={ImageThreeFill} title="Programmier-Schulungen" content="Lorem ipsum dolor sit amet, consetetur sadipscing elitr sed diam." />
