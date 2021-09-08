@@ -5,7 +5,8 @@ export const Card = props => {
             <div className="card-flex-responsive spacing-content spacing-card group">
                 <img className={"card-img group-hover:hidden " + (props.img ? 'block' : 'hidden')} src={props.img} />
                 <img className={"card-img hidden " + (props.imgFill ? 'group-hover:block' : 'hidden')} src={props.imgFill} />
-                <div className="card-text-container">
+
+                <div className="text-container card-text-container">
                     <hr className="hairline-card  border-white group-hover:border-darkblue2" />
                     <div className="card-title text-white group-hover:text-darkblue2">{props.title}</div>
                     <p className="card-content text-white group-hover:text-darkblue2">{props.content}</p>
