@@ -7,6 +7,8 @@ import Service from '../components/Service';
 import References from '../components/References.js';
 import Person from '../components/Person.js';
 
+import AnchorLink from 'react-anchor-link-smooth-scroll'
+
 
 export default function Home() {
     return (
@@ -14,7 +16,9 @@ export default function Home() {
             <Start />
             <Service />
             <References />
-            <Person />
+            <section id='person'>
+                <Person />
+            </section>
 
         </>
     )

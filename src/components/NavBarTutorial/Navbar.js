@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import Dropdown from './Dropdown';
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -30,62 +30,58 @@ function Navbar() {
   return (
     <>
       <nav className='navbar'>
-        <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-          EPIC
-          <i class='fab fa-firstdraft' />
-        </Link>
+
+        <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>Rüdiger Bayer</Link>
+
         <div className='menu-icon' onClick={handleClick}>
           <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
         </div>
+
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
           <li className='nav-item'>
-            <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-              Home
-            </Link>
+            <Link to='/' className='nav-links' onClick={closeMobileMenu}>Start</Link>
           </li>
+
           <li
             className='nav-item'
             onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}
-          >
+            onMouseLeave={onMouseLeave}>
             <Link
               to='/services'
-              className='nav-links'
+              className='nav-links flex flex-row'
               onClick={closeMobileMenu}
             >
-              Services <i className='fas fa-caret-down' />
+              Leistungen
+              <svg class="w-4 h-4 self-center ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"></path>
+              </svg>
             </Link>
             {dropdown && <Dropdown />}
           </li>
+
           <li className='nav-item'>
             <Link
               to='/products'
               className='nav-links'
               onClick={closeMobileMenu}
             >
-              Products
+              Referenzen
             </Link>
           </li>
+
           <li className='nav-item'>
-            <Link
-              to='/contact-us'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Contact Us
-            </Link>
+            <AnchorLink href='#person' className='nav-links'>
+              Person
+            </AnchorLink>
           </li>
-          <li>
-            <Link
-              to='/sign-up'
-              className='nav-links-mobile'
-              onClick={closeMobileMenu}
-            >
-              Sign Up
-            </Link>
+
+          <li className='nav-item'>
+            <AnchorLink href='#contact' className='nav-links'>
+              Kontakt
+            </AnchorLink>
           </li>
+
         </ul>
-        <Button />
       </nav>
     </>
   );

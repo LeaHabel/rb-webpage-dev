@@ -1,19 +1,23 @@
 .navbar {
-  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
-  height: 80px;
+  background: white;
+  height: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 100;
 }
 
 .navbar-logo {
-  color: #fff;
+  color: rgb(29, 29, 29);
   justify-self: start;
   margin-left: 20px;
   cursor: pointer;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 .fa-firstdraft {
@@ -39,15 +43,18 @@
 }
 
 .nav-links {
-  color: white;
+  color: rgb(56, 56, 56);
   text-decoration: none;
   padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.9rem;
 }
 
 .nav-links:hover {
-  background-color: #1888ff;
-  border-radius: 4px;
   transition: all 0.2s ease-out;
+  border-top: solid;
+  color: #b70202;
 }
 
 .fa-bars {
