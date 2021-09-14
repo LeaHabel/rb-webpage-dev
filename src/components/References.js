@@ -19,7 +19,7 @@ export default function References() {
                     content="
                         Der PiezoLith 3000 ist ein medizinisches Therapiesystem zur 
                         extra-korporalen Stoßwellen Lithotripsie (ESWL). Er erlaubt die 
-                        Zertrümmerung von z. B. Nieren-, Blasen- u. Gallen¬steinen ohne 
+                        Zertrümmerung von z. B. Nieren-, Blasen- u. Gallensteinen ohne 
                         operativen Eingriff in den Körper. 
                     " />
             </div>

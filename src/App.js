@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 import './App.css';
 
-import Navigationbar from './components/Navigationbar.js';
-import Dropdown from './components/Dropdown.js';
-
+import Navigationbar from './components/NavBar.js';
+import Dropdown from './components/NavBurgerDropdown.js';
 
 import Contact from './components/Contact.js';
 import Footer from './components/Footer.js';
