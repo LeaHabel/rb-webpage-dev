@@ -15,6 +15,8 @@ body, #root {
     overflow-hidden;
 }
 
+
+/* font related */
 .font-bitter {
     font-family: 'Bitter', serif;
   }
@@ -44,9 +46,10 @@ h4{
     @apply font-bitter
     ;
 }
-  
+
+/* design elements */
 .hairline-display {
-    @apply   border my-6 w-20;
+    @apply   border my-6 w-20 bg-white;
 }
 
 .hairline-card {
@@ -83,7 +86,7 @@ h4{
 }
 
 .card-flex-responsive {
-    @apply bg-darkblue2 
+    @apply bg-blue600 
     cursor-pointer
     
     hover:bg-almostWhite  
@@ -205,9 +208,9 @@ h4{
 
 .start-main {
     @apply 
-    mt-32 mx-auto sm:mt-16 md:mt-32 lg:mt-32 xl:mt-56
+    sm:mt-16 md:mt-32 lg:mt-32 xl:mt-56 mt-16 mx-auto 
     max-w-7xl 
-    px-4  sm:px-6  lg:px-8 ;
+    sm:px-6  lg:pl-32 lg:pr-12 px-6;
 }
 
 .start-text-content {
@@ -260,4 +263,13 @@ h4{
 /* contact page */
 .contact {
     @apply pl-0;
+}
+
+.contact-page {
+    @apply w-full 
+    flex 
+    sm:flex-col md:flex-row-reverse flex-col
+    justify-center 
+    py-16
+    sm:px-8 md:px-0 px-8;
 }

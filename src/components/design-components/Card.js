@@ -7,9 +7,9 @@ export const Card = props => {
                 <img className={"card-img hidden " + (props.imgFill ? 'group-hover:block' : 'hidden')} src={props.imgFill} />
 
                 <div className="text-container card-text-container">
-                    <hr className="hairline-card  border-white group-hover:border-darkblue2" />
-                    <div className="card-title text-white group-hover:text-darkblue2">{props.title}</div>
-                    <p className="card-content text-white group-hover:text-darkblue2">{props.content}</p>
+                    <hr className="hairline-card  border-white group-hover:border-blue600" />
+                    <div className="card-title text-white group-hover:text-blue600">{props.title}</div>
+                    <p className="card-content text-white group-hover:text-blue600">{props.content}</p>
 
                     <div className="button-container ">
                         <button className="button-line group-hover:w-36 group-hover:border-buttonColorBrightBG">

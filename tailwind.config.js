@@ -5,13 +5,15 @@ module.exports = {
 
     extend: {
       colors: {
-        darkblue1: "#010d56",
-        darkblue2: "#000a66",
-        midblue1: "#071987",
-        midblue2: "#0011a6",
-        midblue3: "#0014cc",
-        lightblue1: "#0016e6",
-        lightblue2: "#0018f2",
+        blue700: "#010d56", //darkblue1
+        blue600: "#000a66", //darkblue2
+        //blue500: "#071987", //midblue1
+        blue400: "#0011a6", //midblue2
+        blue300: "#0014cc", //midblue3
+        blue200: "#0016e6", //lightblue1
+        blue100: "#0018f2", //lightblue2
+
+        blue500: "#082996",
 
         almostWhite: "#f9f9f9",
 

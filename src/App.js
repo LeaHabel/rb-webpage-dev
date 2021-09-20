@@ -2,23 +2,22 @@ import React, { useState, useEffect } from 'react';
 
 import './App.css';
 
-import Navigationbar from './components/NavBar.js';
-import Dropdown from './components/NavBurgerDropdown.js';
+import Navigationbar from './components/navbar-simple/NavBar.js';
+import Dropdown from './components/navbar-simple/NavBurgerDropdown.js';
 
-import Contact from './components/Contact.js';
-import Footer from './components/Footer.js';
+import MainPage from './components/pages/mainpage';
+import Service from './components/pages/servicepage';
+import Personpage from './components/pages/personpage';
 
-import Home from './pages/mainpage';
-import Service from './pages/servicepage';
-import Personpage from './pages/personpage';
+import Navbar from './components/navbar-with-dropdown/Navbar';
+import Services from './components/navbar-with-dropdown/pages/Services';
+import Products from './components/navbar-with-dropdown/pages/Products';
+import Marketing from './components/navbar-with-dropdown/pages/Marketing';
+import Consulting from './components/navbar-with-dropdown/pages/Consulting';
 
-import Navbar from './components/NavBarTutorial/Navbar';
-import Home2 from './components/NavBarTutorial/pages/Home2';
-import Services from './components/NavBarTutorial/pages/Services';
-import Products from './components/NavBarTutorial/pages/Products';
-import ContactUs from './components/NavBarTutorial/pages/ContactUs';
-import Marketing from './components/NavBarTutorial/pages/Marketing';
-import Consulting from './components/NavBarTutorial/pages/Consulting';
+import Contact from './components/06-Contact.js';
+import Footer from './components/10-Footer.js';
+
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -57,10 +56,9 @@ export default function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route path='/' exact component={Home} />
+          <Route path='/MainPage' exact component={MainPage} /> {/* components > pages > mainpage */}
           <Route path='/services' component={Service} />
           <Route path='/products' component={Products} />
-          <Route path='/contact-us' component={ContactUs} />
           <Route path='/marketing' component={Marketing} />
           <Route path='/consulting' component={Consulting} />
         </Switch>
