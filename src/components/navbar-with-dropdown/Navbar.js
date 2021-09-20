@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import './Navbar.css';
 import Dropdown from './Dropdown';
 import LogoSVG from '../../images/logo.svg';
+import LogoSVGwhite from '../../images/logo_white.svg';
 import { HashLink as Link } from 'react-router-hash-link';
 import { AnchorLink } from 'react-anchor-link-smooth-scroll';
 
@@ -54,7 +55,7 @@ function Navbar() {
       <nav className={navBar ? 'navbar active' : 'navbar'}>
 
         <Link to='/MainPage' className='navbar-logo' onClick={closeMobileMenu}>
-          <img class='logo-non-active' className="w-16"></img>
+          <img src={navBar ? LogoSVG : LogoSVGwhite} className="w-16"></img>
         </Link>
 
         <div className='menu-icon' onClick={handleClick}>

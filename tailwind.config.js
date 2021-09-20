@@ -38,10 +38,7 @@ module.exports = {
         buttonColorBrightBG: "#b70202",
         darkblue2: "#000a66",
       },
-      backgroundImage: {
-        'logo-normal': "url('/images/logo.svg')",
 
-      },
     },
     variants: {
       extend: {

@@ -34,9 +34,7 @@ ease-in-out;
   cursor-pointer;
 }
 
-.logo-non-active {
-  @apply bg-logo-normal;
-}
+
 
 .fa-firstdraft {
   margin-left: 0.5rem;
