@@ -54,7 +54,7 @@ function Navbar() {
       <nav className={navBar ? 'navbar active' : 'navbar'}>
 
         <Link to='/MainPage' className='navbar-logo' onClick={closeMobileMenu}>
-          <img src={LogoSVG} className="w-16"></img>
+          <img class='logo-non-active' className="w-16"></img>
         </Link>
 
         <div className='menu-icon' onClick={handleClick}>

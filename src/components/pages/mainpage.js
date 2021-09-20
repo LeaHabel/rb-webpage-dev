@@ -13,10 +13,7 @@ export default function MainPage() {
     return (
         <>
             <Start />
-            <Values />
-
             <Service />
-
             <section id='references'>
                 <References />
             </section>

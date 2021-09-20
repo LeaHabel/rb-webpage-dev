@@ -20,6 +20,8 @@ module.exports = {
         buttonColorDarkBG: "#d1593d",
         buttonColorBrightBG: "#b70202",
         buttonColorFull: "#b70202",
+
+        navbarNonActive: '#0013c5',
       },
       width: {
         '48-custom': '48%',
@@ -36,20 +38,23 @@ module.exports = {
         buttonColorBrightBG: "#b70202",
         darkblue2: "#000a66",
       },
+      backgroundImage: {
+        'logo-normal': "url('/images/logo.svg')",
 
+      },
     },
-  },
-  variants: {
-    extend: {
-      translate: ['group-hover'],
-      width: ['group-hover', 'hover'],
-      opacity: ['group-hover', 'hover'],
-      display: ['group-hover', 'hover'],
-      border: ['group-hover', 'hover'],
-      borderWidth: ['group-hover', 'hover'],
+    variants: {
+      extend: {
+        translate: ['group-hover'],
+        width: ['group-hover', 'hover'],
+        opacity: ['group-hover', 'hover'],
+        display: ['group-hover', 'hover'],
+        border: ['group-hover', 'hover'],
+        borderWidth: ['group-hover', 'hover'],
+      },
     },
-  },
-  plugins: [
-    require("tailwindcss-nested-groups"),
-  ],
+    plugins: [
+      require("tailwindcss-nested-groups"),
+    ],
+  }
 }
