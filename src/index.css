@@ -203,14 +203,20 @@ h4{
 
 /* start page */
 .start-container {
-    @apply absolute z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32;
+    @apply absolute z-10 
+    sm:pb-16 md:pb-20 
+    lg:max-w-2xl 
+    lg:w-full 
+    pb-8 lg:pb-28 xl:pb-32;
 }
 
 .start-main {
     @apply 
-    sm:mt-16 md:mt-32 lg:mt-32 xl:mt-56 mt-16 mx-auto 
-    max-w-7xl 
-    sm:px-6  lg:pl-32 lg:pr-12 px-6;
+    sm:mt-52 md:mt-72 lg:mt-80 xl:mt-80 mt-52 
+    sm:ml-0 md:ml-8 ml-0
+    sm:w-full md:w-3/5 lg:w-4/5 xl:w-full w-full
+    sm:px-4 md:px-8 px-4
+    ;
 }
 
 .start-text-content {
@@ -234,15 +240,17 @@ h4{
 
 .background {
     @apply 
-    lg:absolute 
-    lg:inset-y-0 
-    lg:w-full lg:h-auto;
+    absolute 
+    inset-y-0 
+    sm:w-auto lg:w-full w-auto
+    sm:h-full lg:h-auto h-full;
 }
 
 .backgroundImg {
     @apply 
+    object-cover
     sm:w-auto md:w-full lg:w-full  max-w-none
-    sm:h-full md:h-auto lg:h-full;
+    h-full;
 }
 
 /* person page */
@@ -272,4 +280,56 @@ h4{
     justify-center 
     py-16
     sm:px-8 md:px-0 px-8;
+}
+.contact-information {
+    @apply sm:ml-0 md:ml-8 lg:ml-16 ml-0;
+}
+
+.contact-form {
+    @apply 
+    w-full 
+    max-w-lg 
+    sm:mt-16 md:mt-0 mt-16;
+}
+
+.boxshadowTop {
+    box-shadow: 0 -2px 0 #b70202;
+}
+
+
+
+
+
+/* hover example */
+article, aside, figure, footer, header, hgroup,
+menu, nav, section { display: block; }
+
+#page-wrap { width: 960px; margin: 80px auto; }
+#all > ul { 
+    list-style: none;
+    float: left; width: 200px; 
+    padding: 0 10px 0 0; 
+}
+#all a { 
+    text-decoration: none; 
+    display: block; 
+    padding: 10px;
+    background: #900; 
+    border-radius: 20px; 
+    color: white; 
+    text-align: center;
+    margin: 0 0 5px 0; 
+    
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+}
+#all:hover a {
+    opacity: 0.2;
+}
+#all:hover ul:hover a {
+    opacity: 0.5; 
+}
+#all:hover ul:hover a:hover {
+    opacity: 1;
 }

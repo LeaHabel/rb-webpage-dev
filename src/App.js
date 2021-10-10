@@ -5,21 +5,25 @@ import './App.css';
 import Navigationbar from './components/navbar-simple/NavBar.js';
 import Dropdown from './components/navbar-simple/NavBurgerDropdown.js';
 
-import MainPage from './components/pages/mainpage';
-import Service from './components/pages/servicepage';
-import Personpage from './components/pages/personpage';
+import Home from './components/pages/mainpage';
+//import Service from './components/pages/servicepage';
+//import Personpage from './components/pages/personpage';
 
 import Navbar from './components/navbar-with-dropdown/Navbar';
-import Services from './components/navbar-with-dropdown/pages/Services';
-import Products from './components/navbar-with-dropdown/pages/Products';
-import Marketing from './components/navbar-with-dropdown/pages/Marketing';
-import Consulting from './components/navbar-with-dropdown/pages/Consulting';
+//import Services from './components/pages/Services';
+//import Products from './components/pages/Products';
+
+import Service1 from './components/pages/Service1';
+import Service2 from './components/pages/Service2';
+import Service3 from './components/pages/Service3';
+import Service4 from './components/pages/Service4';
 
 import Contact from './components/06-Contact.js';
-import Footer from './components/10-Footer.js';
+import Footer from './components/10-Footer';
 
-
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, withRouter } from 'react-router-dom';
+import Disclaimer from './components/11-Disclaimer';
+import Impressum from './components/11-Impressum';
 
 {/*import { Switch, Route } from 'react-router';*/ }
 {/* https://www.youtube.com/watch?v=gOQ31Kc8H5E&t=437s&ab_channel=BrianDesign 43:15*/ }
@@ -48,25 +52,26 @@ export default function App() {
     }
   })
 
-
   return (
     <>
       {/* <Navigationbar toggle={toggle} /> passing in  toggle to the Navbar component*/}
       {/* <Dropdown isOpen={isOpen} toggle={toggle} /> */}
-      <Router>
-        <Navbar />
-        <Switch>
-          <Route path='/MainPage' exact component={MainPage} /> {/* components > pages > mainpage */}
-          <Route path='/services' component={Service} />
-          <Route path='/products' component={Products} />
-          <Route path='/marketing' component={Marketing} />
-          <Route path='/consulting' component={Consulting} />
-        </Switch>
-      </Router>
+      <Navbar />
+      <Switch>
 
-      <section id='contact'>
-        <Contact />
-      </section>
+        {/* <Redirect exact from="/" to="MainPage" component={MainPage} />*/}
+        <Route path='/' exact component={Home} /> {/* components > pages > mainpage */}
+
+        {/* <Route path='/services' component={Service} /> */}
+
+        <Route path='/service1' component={Service1} />
+        <Route path='/service2' component={Service2} />
+        <Route path='/service3' component={Service3} />
+        <Route path='/service4' component={Service4} />
+        <Route path='/disclaimer' exact component={withRouter(Disclaimer)} />
+        <Route path='/impressum' exact component={withRouter(Impressum)} />
+      </Switch>
+
 
       <Footer />
 

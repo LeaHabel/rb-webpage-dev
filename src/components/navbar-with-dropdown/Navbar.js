@@ -11,12 +11,13 @@ import { AnchorLink } from 'react-anchor-link-smooth-scroll';
 {/* https://github.com/rafgraph/react-router-hash-link */ }
 
 function Navbar() {
-  const [click, setClick] = useState(false);
+  const [navMenuActive, setNavMenuActive] = useState(false);
   const [dropdown, setDropdown] = useState(false);
-  const [navBar, setNavBar] = useState(false);
+  const [navBarInit, setNavBarInit] = useState(true);
 
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
+  const handleClick = () => setNavMenuActive(!navMenuActive);
+  const closeMobileMenu = () => setNavMenuActive(false);
+
 
   const onMouseEnter = () => {
     if (window.innerWidth < 960) {
@@ -36,9 +37,9 @@ function Navbar() {
 
   const changeBackground = () => {
     if (window.scrollY >= 100) {
-      setNavBar(true);
+      setNavBarInit(false);
     } else {
-      setNavBar(false);
+      setNavBarInit(true);
     }
   }
 
@@ -50,30 +51,55 @@ function Navbar() {
     window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
   }
 
+  const changeNavMenuStyle = (navBarInit, navMenuActive) => {
+    if (navBarInit && navMenuActive) { /* initial, blue navbar and expanded */
+      return 'nav-menu nav-menu-init active';
+    } else if (navBarInit && !navMenuActive) { /* initial, blue navbar not expanded */
+      return 'nav-menu';
+    } else if (!navBarInit && navMenuActive) { /* normal, white navbar and expanded */
+      return 'nav-menu active'
+    } else if (!navBarInit && !navMenuActive) { /*normal, white navbar and not expanded */
+      return 'nav-menu';
+    }
+  }
+
+
   return (
     <>
-      <nav className={navBar ? 'navbar active' : 'navbar'}>
+      <nav className={navBarInit ? 'navbar navbar-init' : 'navbar navbar-normal'}>
 
-        <Link to='/MainPage' className='navbar-logo' onClick={closeMobileMenu}>
-          <img src={navBar ? LogoSVG : LogoSVGwhite} className="w-16"></img>
+        <Link
+          to='/#home'
+          className='navbar-logo'
+          smooth
+          onClick={closeMobileMenu}
+          scroll={el => scrollWithOffset(el)}
+        >
+          <img src={navBarInit ? LogoSVGwhite : LogoSVG} className="w-16"></img>
         </Link>
 
         <div className='menu-icon' onClick={handleClick}>
-          {/* <i className={click ? 'fas fa-times' : 'fas fa-bars'} /> */}
-          <svg className={navBar ? 'w-6 h-6' : 'w-6 h-6 text-white'} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <svg className={navBarInit ? 'w-6 h-6 text-white' : 'w-6 h-6 text-black'} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </div>
 
-        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+        <ul className={changeNavMenuStyle(navBarInit, navMenuActive)}>
 
           <li
             className='nav-item'
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}>
             <Link
-              to='MainPage#service'
-              className={navBar ? 'nav-links active flex flex-row' : 'nav-links flex flex-row'}
+              to={{
+                pathname: "/",
+                hash: "#service",
+                //search: "?sort=name",
+                //state: { fromDashboard: true },
+
+              }}
+              // to='/home#service'
+              className={navBarInit ? 'nav-links-init flex flex-row' : 'nav-links flex flex-row'}
               smooth
               onClick={closeMobileMenu}
               scroll={el => scrollWithOffset(el)}
@@ -87,10 +113,12 @@ function Navbar() {
           </li>
 
           <li className='nav-item'>
-
             <Link
-              to='/MainPage#references'
-              className={navBar ? 'nav-links active' : 'nav-links'}
+              to={{
+                pathname: "/",
+                hash: "#references",
+              }}
+              className={navBarInit ? 'nav-links-init' : 'nav-links'}
               smooth
               onClick={closeMobileMenu}
               scroll={el => scrollWithOffset(el)}
@@ -103,20 +131,29 @@ function Navbar() {
 
           <li className='nav-item'>
             <Link
-              to='/MainPage#person'
-              className={navBar ? 'nav-links active' : 'nav-links'}
+              to={{
+                pathname: "/",
+                hash: "#person",
+              }}
+              //to='/MainPage#person'
+              className={navBarInit ? 'nav-links-init' : 'nav-links'}
               smooth
+              onClick={closeMobileMenu}
               scroll={el => scrollWithOffset(el)}
             >
-              Person
+              Über mich
             </Link>
           </li>
 
           <li className='nav-item'>
             <Link
-              to='/MainPage#contact'
+              to={{
+                pathname: "/",
+                hash: "#contact",
+              }}
               smooth
-              className={navBar ? 'nav-links active' : 'nav-links'}
+              onClick={closeMobileMenu}
+              className={navBarInit ? 'nav-links-init' : 'nav-links'}
               scroll={el => scrollWithOffset(el)}
             >
               Kontakt

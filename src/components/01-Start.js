@@ -10,7 +10,7 @@ const navigation = [
     { name: 'Company', href: '#' },
 ]
 
-export default function Start() {
+export default function Home() {
     return (
         <div className="relative bg-white overflow-hidden h-screen">
             <div className="max-w-7xl mx-auto">
