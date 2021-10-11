@@ -32,7 +32,7 @@ export default function Service1() {
       <div className="card-bg-responsive">
         <div className="spacing-content service-container">
           <div className="service-img-container">
-            <img className="service-img" src={Image}></img>
+            <img className="service-img" src={MenuItems[serviceNumber].image}></img>
           </div>
           <div className="service-text-container">
             <TextContainer

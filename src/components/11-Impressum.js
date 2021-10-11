@@ -1,16 +1,21 @@
-import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
 
 import { TopicHeadline } from "./design-components/TopicHeadline";
 
 export default function Impressum() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    },
+        [])
     return (
         <>
             <div className="mt-24">
                 <TopicHeadline headline="Impressum" />
             </div>
 
-            <section id='impressum' className="sm:mx-8 md:mx-16 lg:mx-28 mx-8 my-16">
+            <section id='impressum' className="impressum-container">
 
 
                 <h3>Angaben gemäß 5 TMG</h3>
@@ -44,7 +49,7 @@ export default function Impressum() {
                 <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucher&shy;schlichtungs&shy;stelle teilzunehmen.</p>
                 <br />
 
-                <p className="text-xs text-gray-500">Quelle: <a href="https://www.e-recht24.de">e-recht24.de</a></p>
+                <p className="text-source">Quelle: <a href="https://www.e-recht24.de">e-recht24.de</a></p>
 
             </section>
 

@@ -1,4 +1,4 @@
-.dropdown-menu-init {
+.dropdown-menu-init { 
   width: 15rem;
   position: absolute;
   top: 6rem;
@@ -6,7 +6,7 @@
   text-align: start;
   z-index: 100;
   box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.27);
-}
+} /* die Klasse dropdown-menu-init wird noch nicht verwendet, ist noch in bearbeitung */
 
 .dropdown-menu {
   width: 15rem;
@@ -19,7 +19,7 @@
 }
 
 .dropdown-menu li {
-  background-color: rgba(0, 19, 197, var(--tw-bg-opacity));
+  background-color: white; 
   cursor: pointer;
 }
 

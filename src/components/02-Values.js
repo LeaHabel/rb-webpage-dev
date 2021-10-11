@@ -1,5 +1,7 @@
 import LogoVariation from '../images/logo_variation-designelement.svg'
 
+//Diese Komponente wird noch nicht verwendet. 
+
 export default function Values() {
     return (
         <>

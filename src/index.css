@@ -206,6 +206,12 @@ h4{
 
 
 /* start page */
+.start-component {
+    @apply relative bg-white overflow-hidden h-screen;
+}
+.start-area {
+    @apply max-w-7xl mx-auto;
+}
 .start-container {
     @apply absolute z-10 
     sm:pb-16 md:pb-20 
@@ -304,7 +310,18 @@ h4{
     @apply italic text-sm text-blue600 p-4;
 }
 
+
 /* service pages */
+.breadcrumb {
+    @apply 
+    italic 
+    flex flex-row 
+    items-center 
+    pt-8 pl-16 
+    text-sm 
+    opacity-80;
+}
+
 .service-img-container {
     @apply sm:w-full md:w-1/2 w-full flex justify-center;
 }
@@ -324,6 +341,52 @@ h4{
     sm:px-0 sm:py-8 md:p-4 px-0 py-8
     sm:pb-8 md:pb-20 pb-8;
 }
+
+/* footer */
+.footer-BG {
+    @apply h-72 
+    bg-blue700
+    text-white
+    p-8;
+}
+.footer-container {
+    @apply flex flex-col w-full opacity-70;
+}
+.footer-logo-middle {
+    @apply left-1/2 -ml-20 relative flex flex-row my-4 mb-16;
+}
+.footer-logo-title {
+    @apply font-light pl-4 opacity-90;
+}
+.footer-logo-subtitle {
+    @apply font-extralight text-sm;
+}
+.footer-row {
+    @apply flex flex-row justify-around;
+}
+.footer-link {
+    @apply opacity-80 font-light;
+}
+.footer-copyright {
+    @apply my-2 mt-6 text-sm absolute;
+}
+
+/* disclaimer & impressum */
+.disclaimer-containter {
+    @apply sm:mx-8 md:mx-16 lg:mx-28 mx-8 my-16;
+}
+
+.impressum-container {
+    @apply sm:mx-8 md:mx-16 lg:mx-28 mx-8 my-16;
+}
+
+.text-source {
+    @apply text-xs text-gray-500;
+}
+
+
+
+
 
 
 

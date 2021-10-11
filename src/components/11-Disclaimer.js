@@ -1,15 +1,21 @@
-import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
 
 import { TopicHeadline } from "./design-components/TopicHeadline";
 
 export default function Disclaimer() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    },
+        [])
+
     return (
         <>
             <div className="mt-24">
                 <TopicHeadline headline="Disclaimer" />
             </div>
-            <section id='disclaimer' className="sm:mx-8 md:mx-16 lg:mx-28 mx-8 my-16">
+            <section id='disclaimer' className="disclaimer-containter">
 
 
                 <h3>1. Warnhinweis zu Inhalten</h3>
@@ -29,7 +35,7 @@ export default function Disclaimer() {
                 <p>Soweit besondere Bedingungen für einzelne Nutzungen dieser Website von den vorgenannten Nummern 1. bis 4. abweichen, wird an entsprechender Stelle ausdrücklich darauf hingewiesen. In diesem Falle gelten im jeweiligen Einzelfall die besonderen Nutzungsbedingungen.</p>
                 <br></br>
 
-                <p className="text-xs text-gray-500">Quelle: Juraforum.de</p>
+                <p className="text-source">Quelle: Juraforum.de</p>
 
             </section>
 

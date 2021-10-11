@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
-//import { Link, Route } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import './Navbar.css';
+
 import Dropdown from './Dropdown';
+
 import LogoSVG from '../../images/logo.svg';
 import LogoSVGwhite from '../../images/logo_white.svg';
-import { HashLink as Link } from 'react-router-hash-link';
-import { AnchorLink } from 'react-anchor-link-smooth-scroll';
 
-
-{/* https://github.com/rafgraph/react-router-hash-link */ }
 
 function Navbar() {
   const [navMenuActive, setNavMenuActive] = useState(false);
@@ -98,7 +96,6 @@ function Navbar() {
                 //state: { fromDashboard: true },
 
               }}
-              // to='/home#service'
               className={navBarInit ? 'nav-links-init flex flex-row' : 'nav-links flex flex-row'}
               smooth
               onClick={closeMobileMenu}
@@ -135,7 +132,6 @@ function Navbar() {
                 pathname: "/",
                 hash: "#person",
               }}
-              //to='/MainPage#person'
               className={navBarInit ? 'nav-links-init' : 'nav-links'}
               smooth
               onClick={closeMobileMenu}

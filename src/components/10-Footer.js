@@ -1,27 +1,37 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import Logo from '../images/logo_white.svg'
+
 
 export default function Footer() {
     return (
         <>
-            <div className="h-48 bg-blue700 text-white p-8">
-                <div className="flex flex-row justify-around ">
-                    <div>
-                        <Link to='/disclaimer' >
-                            <p className="opacity-70 font-light">Disclaimer</p>
-                        </Link>
-                        <p className="my-2 mt-6 opacity-90 text-sm absolute ">© 2021 Gestaltet von <a href="http://www.leasulinhabel.com">Lea Su-Lin Habel</a></p>
+            <div className="footer-BG">
+                <div className="footer-container">
+                    <div className="footer-logo-middle">
+                        <img src={Logo} className="w-16" />
+                        <p className="footer-logo-title">Rüdiger Bayer <br /><span className="footer-logo-subtitle">EDV Schulung</span> </p>
                     </div>
-                    <Link to='/impressum'>
-                        <p className="opacity-70 font-light">Impressum</p>
-                    </Link>
+                    <div className="footer-row ">
+                        <div>
+                            <Link to='/disclaimer' >
+                                <p className="footer-link">Disclaimer</p>
+                            </Link>
+                            <p className="footer-copyright">© 2021 Gestaltet von <a href="http://www.leasulinhabel.com">Lea Su-Lin Habel</a></p>
+                        </div>
+                        <Link to='/impressum'>
+                            <p className="footer-link">Impressum</p>
+                        </Link>
+
+                    </div>
                 </div>
             </div>
 
 
 
             {/*
+//Vorlage-Beispiel für Hover Effekt
             <div id="page-wrap">
 
                 <div id="all">
@@ -60,6 +70,7 @@ export default function Footer() {
 
             </div>
             */}
+
         </>
     );
 
