@@ -21,7 +21,7 @@ export default function Footer() {
 
 
 
-
+            {/*
             <div id="page-wrap">
 
                 <div id="all">
@@ -59,6 +59,7 @@ export default function Footer() {
                 </div>
 
             </div>
+            */}
         </>
     );
 

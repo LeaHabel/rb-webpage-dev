@@ -15,6 +15,10 @@ body, #root {
     overflow-hidden;
 }
 
+.belowNavbar {
+    @apply h-24 w-full;
+}
+
 
 /* font related */
 .font-bitter {
@@ -296,6 +300,30 @@ h4{
     box-shadow: 0 -2px 0 #b70202;
 }
 
+.emailSuccess {
+    @apply italic text-sm text-blue600 p-4;
+}
+
+/* service pages */
+.service-img-container {
+    @apply sm:w-full md:w-1/2 w-full flex justify-center;
+}
+.service-text-container {
+    @apply sm:w-full md:w-1/2 w-full;
+}
+
+.service-img {
+    @apply sm:w-1/2 md:w-1/2 w-1/2
+    object-contain 
+    sm:mb-8 md:mb-0 mb-8
+    sm:mr-0 md:mr-8 mr-0;
+}
+
+.service-container {
+    @apply sm:w-full lg:w-3/4 w-full
+    sm:px-0 sm:py-8 md:p-4 px-0 py-8
+    sm:pb-8 md:pb-20 pb-8;
+}
 
 
 

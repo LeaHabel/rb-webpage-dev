@@ -8,6 +8,10 @@ function Dropdown() {
 
   const handleClick = () => setClick(!click);
 
+  const changeDropdownStyle = (click, navBarInit) => {
+
+  }
+
   return (
     <>
       <ul
@@ -21,7 +25,7 @@ function Dropdown() {
                 className={item.cName}
                 to={item.path}
                 onClick={() => setClick(false)}
-              >
+              > {/* src={navBarInit ? item.image-init : item.image } -> zeige verschdn svgs je nach HG-Farbe */}
                 <img src={item.image} class="fill-current text-red-500 h-8 w-8 relative z-100 " viewBox="0 0 60 60">
                 </img>
                 {item.title}
