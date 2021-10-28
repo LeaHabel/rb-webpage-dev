@@ -124,13 +124,51 @@ h4{
 
     transition-all;
 }
-/*.service-card {
-    @apply flex flex-col justify-center items-center bg-white h-screen py-40;
+
+/*hover effect - image/icon*/
+.imgBrightBG {
+    display: none;
+}
+.card-flex-responsive:hover .imgDarkBG{
+    display: none;
+}
+.card-flex-responsive:hover .onlyShowIfImgExists{
+    display: block;
 }
 
-.center-content {
-    @apply flex flex-col justify-center items-center;
-}*/
+/*hover effect - text*/
+.card-flex-responsive:hover .hairline-card{
+   @apply border-blue600;
+}
+.card-flex-responsive:hover .card-title{
+    @apply text-blue600;
+ }
+ .card-flex-responsive:hover .card-content{
+    @apply text-blue600;
+ }
+ /*hover effect - button*/
+ .card-flex-responsive:hover .button-line {
+     @apply w-36 border-buttonColorBrightBG;
+ }
+ .card-flex-responsive:hover .button-text {
+    @apply opacity-100;
+}
+ .card-flex-responsive:hover .button-arrow {
+    @apply translate-x-24;
+}
+.card-flex-responsive:hover .button-arrow-svg {
+    @apply text-buttonColorBrightBG;
+}
+
+.button-hover-area:hover .button-colored-area {
+    @apply opacity-100 w-36;
+}
+.button-hover-area:hover .button-text {
+    @apply text-white;
+}
+.button-hover-area:hover .button-arrow-svg {
+    @apply text-white;
+}
 
 
 /* button */
@@ -384,43 +422,3 @@ h4{
     @apply text-xs text-gray-500;
 }
 
-
-
-
-
-
-
-
-/* hover example */
-article, aside, figure, footer, header, hgroup,
-menu, nav, section { display: block; }
-
-#page-wrap { width: 960px; margin: 80px auto; }
-#all > ul { 
-    list-style: none;
-    float: left; width: 200px; 
-    padding: 0 10px 0 0; 
-}
-#all a { 
-    text-decoration: none; 
-    display: block; 
-    padding: 10px;
-    background: #900; 
-    border-radius: 20px; 
-    color: white; 
-    text-align: center;
-    margin: 0 0 5px 0; 
-    
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-}
-#all:hover a {
-    opacity: 0.2;
-}
-#all:hover ul:hover a {
-    opacity: 0.5; 
-}
-#all:hover ul:hover a:hover {
-    opacity: 1;
-}

@@ -27,50 +27,6 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-
-
-
-            {/*
-//Vorlage-Beispiel für Hover Effekt
-            <div id="page-wrap">
-
-                <div id="all">
-
-                    <ul>
-                        <li><a href="#">---</a></li>
-                        <li><a href="#">---</a></li>
-                        <li><a href="#">---</a></li>
-                        <li><a href="#">---</a></li>
-                        <li><a href="#">---</a></li>
-                        <li><a href="#">---</a></li>
-                        <li><a href="#">---</a></li>
-                    </ul>
-
-                    <ul>
-                        <li><a href="#">---</a></li>
-                        <li><a href="#">---</a></li>
-                        <li><a href="#">---</a></li>
-                        <li><a href="#">---</a></li>
-                        <li><a href="#">---</a></li>
-                        <li><a href="#">---</a></li>
-                        <li><a href="#">---</a></li>
-                    </ul>
-
-                    <ul>
-                        <li><a href="#">---</a></li>
-                        <li><a href="#">---</a></li>
-                        <li><a href="#">---</a></li>
-                        <li><a href="#">---</a></li>
-                        <li><a href="#">---</a></li>
-                        <li><a href="#">---</a></li>
-                        <li><a href="#">---</a></li>
-                    </ul>
-
-                </div>
-
-            </div>
-            */}
-
         </>
     );
 
