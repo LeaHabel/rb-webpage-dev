@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+
 import { TopicHeadline } from './design-components/TopicHeadline';
 import { TextContainer } from './design-components/TextContainer';
+import { Button } from './design-components/Button';
+
 import emailjs from "emailjs-com";
 
 export default function Contact() {
@@ -126,11 +129,12 @@ export default function Contact() {
 
                     <div class="md:flex md:items-center">
                         <div class="md:w-full flex flex-row align-center">
-                            <button
+                            <Button title="Senden" type="submit"></Button>
+                            {/* <button
                                 class="shadow bg-buttonColorBrightBG hover:bg-teal-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 uppercase block"
                                 type="submit">
                                 Senden
-                            </button>
+                            </button> */}
                             <p className={emailSuccess ? 'block emailSuccess' : 'hidden emailSuccess'}>Erfolgreich versendet!</p>
                         </div>
                         <div class="md:w-2/3"></div>

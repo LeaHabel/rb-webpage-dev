@@ -1,5 +1,9 @@
+import { HashLink as Link } from 'react-router-hash-link';
+
 import { Card } from './design-components/Card';
 import { TopicHeadline } from './design-components/TopicHeadline'
+
+import { MenuItems } from './navbar-with-dropdown/MenuItems';
 
 import ImageOne from '../images/01-wheel.svg';
 import ImageTwo from '../images/01-shield.svg';
@@ -18,10 +22,35 @@ export default function Service() {
                 <TopicHeadline headline="Leistungen" bgColor="bg-blue500" textColor="text-white" />
 
                 <div className="card-bg-responsive bg-blue500">
-                    <Card img={ImageOne} imgFill={ImageOneFill} title="Automotive SPICE" content="Lorem ipsum dolor sit amet, consetetur sadipscing elitr sed diam." />
-                    <Card img={ImageTwo} imgFill={ImageTwoFill} title="Funktionale Sicherheit ISO 26262" content="Lorem ipsum dolor sit amet, consetetur sadipscing elitr sed diam." />
-                    <Card img={ImageThree} imgFill={ImageThreeFill} title="Programmier-Schulungen" content="Lorem ipsum dolor sit amet, consetetur sadipscing elitr sed diam." />
-                    <Card img={ImageFour} imgFill={ImageFourFill} title="Methodische Schulungen" content="Lorem ipsum dolor sit amet, consetetur sadipscing elitr sed diam." />
+
+                    <Card
+                        img={ImageOne}
+                        imgFill={ImageOneFill}
+                        title="Automotive SPICE"
+                        link="/service1"
+                        content="Lorem ipsum dolor sit amet, consetetur sadipscing elitr sed diam."
+                    />
+                    <Card
+                        img={ImageTwo}
+                        imgFill={ImageTwoFill}
+                        title="Funktionale Sicherheit ISO 26262"
+                        link="/service2"
+                        content="Lorem ipsum dolor sit amet, consetetur sadipscing elitr sed diam."
+                    />
+                    <Card
+                        img={ImageThree}
+                        imgFill={ImageThreeFill}
+                        title="Programmier-Schulungen"
+                        link="/service3"
+                        content="Lorem ipsum dolor sit amet, consetetur sadipscing elitr sed diam."
+                    />
+                    <Card
+                        img={ImageFour}
+                        imgFill={ImageFourFill}
+                        title="Methodische Schulungen"
+                        link="/service4"
+                        content="Lorem ipsum dolor sit amet, consetetur sadipscing elitr sed diam."
+                    />
                 </div>
             </div>
         </>

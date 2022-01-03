@@ -46,7 +46,7 @@ h3 {
     text-lg;
 }
 
-h4{
+h4, .h4{
     @apply font-bitter
     ;
 }
@@ -80,14 +80,13 @@ h4{
     sm:p-8 lg:p-16 xl:p-10 p-8 ;
 }
 
-
-
-.spacing-card {
+.spacing-card{
     @apply 
     sm:w-full md:w-3/4 lg:w-3/4 xl:w-2/5 w-full   
     sm:h-auto lg:h-82 h-auto
     ;
 }
+
 
 .card-flex-responsive {
     @apply bg-blue600 
@@ -166,7 +165,7 @@ h4{
 .button-hover-area:hover .button-text {
     @apply text-white;
 }
-.button-hover-area:hover .button-arrow-svg {
+.button-hover-area:hover   .button-arrow-svg {
     @apply text-white;
 }
 
@@ -247,24 +246,16 @@ h4{
 .start-component {
     @apply relative bg-white overflow-hidden h-screen;
 }
-.start-area {
-    @apply max-w-7xl mx-auto;
-}
+
 .start-container {
     @apply absolute z-10 
-    sm:pb-16 md:pb-20 
     lg:max-w-2xl 
-    lg:w-full 
-    pb-8 lg:pb-28 xl:pb-32;
-}
-
-.start-main {
-    @apply 
-    sm:mt-52 md:mt-72 lg:mt-80 xl:mt-80 mt-52 
-    sm:ml-0 md:ml-8 ml-0
     sm:w-full md:w-3/5 lg:w-4/5 xl:w-full w-full
-    sm:px-4 md:px-8 px-4
-    ;
+
+    pb-8 lg:pb-28 xl:pb-32
+    sm:mt-52 md:mt-72 lg:mt-80 xl:mt-80 mt-52 
+    sm:ml-0 md:ml-8 lg:ml-16 ml-0
+    sm:px-4 md:px-8 px-4;
 }
 
 .start-text-content {
@@ -354,7 +345,7 @@ h4{
     @apply 
     italic 
     flex flex-row 
-    items-center 
+    items-baseline 
     pt-8 pl-16 
     text-sm 
     opacity-80;

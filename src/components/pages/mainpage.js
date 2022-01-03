@@ -7,9 +7,6 @@ import References from '../04-References.js';
 import Person from '../05-Person.js';
 import Contact from '../06-Contact';
 
-import AnchorLink from 'react-anchor-link-smooth-scroll'
-
-
 export default function Home() {
     return (
         <>
